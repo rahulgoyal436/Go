@@ -45,3 +45,7 @@ func Formula(n uint) uint {
 	powPhi := math.Pow(phi, float64(n))
 	return uint(powPhi/sqrt5 + 0.5)
 }
+
+func Formula() string {
+	return "dummy str"
+}
