@@ -1,0 +1,71 @@
+### Test Scenarios for Ticket ZBIO-6710:
+
+#### **Functional Test Scenarios**
+These validate the API key update functionality and associated behavior for various cases:
+
+- **Scenario 1: Update the OpenAI API Key with correct credentials**
+  - **Input**: Correct OpenAI API key credentials (non-expired, properly formatted).
+  - **Expected Output**: The key is updated successfully without any error message.
+  - **Edge Case**: Ensure behavior remains consistent across multiple retries to update the same key.
+
+- **Scenario 2: Update an invalid OpenAI API Key**
+  - **Input**: Invalid API key (e.g., expired or incorrectly formatted).
+  - **Expected Output**: An error message is displayed specifying invalid or expired key.  
+  - **Edge Case**: Ensure adequate error catching for keys with edge-case invalid syntax, like empty strings or malformed keys.
+
+- **Scenario 3: Update OpenAI API Key and invoke dependent function**
+  - **Input**: After updating the key with valid credentials, invoke OpenAI functions like `openAi.models.list()`.
+  - **Expected Output**: Functions execute successfully, confirming that the new key is utilized instead of an older/stale key.
+
+- **Scenario 4: Update OpenAI API Key while testing retry mechanism**
+  - **Input**: Correct credentials provided after the first attempt fails.
+  - **Expected Output**: Retry mechanism successfully switches to the updated key without using a stale or undefined value.
+
+- **Scenario 5: Update an invalid key other than OpenAI (e.g., API keys for third-party services)**
+  - **Input**: Invalid credentials for keys like GitHub (valid scenarios raised in the description suggest GitHub keys are behaving differently).
+  - **Expected Output**: Validate that error responses and key update mechanisms are isolated to OpenAI keys as described.
+
+- **Scenario 6: Add validation for empty or undefined OpenAI key**
+  - **Input**: Attempt to update with an empty value (`""`) or undefined key.
+  - **Expected Output**: Error message displayed, ensuring such tokens are accurately caught as invalid.
+
+- **Scenario 7: Remove redundant function calls**
+  - **Input**: Check behavior after removal of `openAi.models.list()` logic.
+  - **Expected Output**: Function executes successfully without errors, confirming no functional impact due to redundant call elimination.
+
+#### **Non-Functional Test Scenarios**
+These validate performance, scalability, security, and usability aspects of the feature.
+
+- **Scenario 1: Performance Impact for Large Number of Retries**
+  - **Input**: Test multiple retries with valid OpenAI key updates under high concurrent loads.
+  - **Expected Output**: The application scales effectively, key update duration remains within acceptable limits without impacting other functionalities.
+
+- **Scenario 2: Output Masking for Security**
+  - **Input**: Validate the error log and output (e.g., console or logs) for masked API token details.
+  - **Expected Output**: Key details must remain obfuscated in error messages/logs, preserving security.
+
+- **Scenario 3: Usability - Error Message Clarity**
+  - **Input**: Input an invalid or expired OpenAI key.
+  - **Expected Output**: The application displays appropriate and actionable error messages (e.g., "Invalid OpenAI Key – Please confirm its validity").
+
+- **Scenario 4: Compatibility Across Environments**
+  - **Input**: Test API key updates across different environments (development, staging, production).
+  - **Expected Output**: Consistent behavior in all environments without environment-specific conflicts.
+
+- **Scenario 5: Scalability for Key Updates Across Other APIs**
+  - **Input**: Validate behavior with attempts to update multiple API keys simultaneously (GitHub, OpenAI, etc.).
+  - **Expected Output**: The application handles concurrent updates effectively, ensuring API keys are appropriately segregated.
+
+- **Scenario 6: Security Test Against Injection Vulnerabilities**
+  - **Input**: Input malicious payload (like SQL injection attacks or unauthorized scripts) as the OpenAI key.
+  - **Expected Output**: The application prevents injection, identifies the input as invalid, and logs errors securely.
+
+- **Scenario 7: Stability Across High Stress or Fault Scenarios**
+  - **Input**: Run the application in high-load scenarios simulating multiple users updating keys repeatedly.
+  - **Expected Output**: Ensure system gracefully handles stress, with key updates reliably validated without crashing or hanging.
+
+---
+
+### Notes:
+- Error messages related to OpenAI key failures must follow the language convention in the user story (i.e., precise and actionable).
+- Functional correlations like stale key issues and retry logic must be rigorously validated to address the root problems effectively.
