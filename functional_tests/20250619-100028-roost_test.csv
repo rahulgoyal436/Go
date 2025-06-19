@@ -1,0 +1,4 @@
+"Scenario: Add a new book to the library inventory"
+"Scenario: Retrieve details of an existing book"
+"Scenario: Update information of a book in the inventory"
+"Scenario: Delete a book from the library inventory"
