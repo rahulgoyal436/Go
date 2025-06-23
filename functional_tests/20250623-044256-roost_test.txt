@@ -1,0 +1,160 @@
+### Test Scenarios for Ticket ID: ZBIO-6710  
+**Summary:** Test the functionality and behavior of the CLI during the OpenAI API key update process, ensuring updated token usage, validation, and error handling.
+
+---
+
+### **Functional Test Cases**
+#### **Scenario 1: Successful API Key Update**
+- **Input:**
+  - Enter a valid OpenAI API key (e.g., `sk-VALIDTOKEN12345`).
+- **Steps to Execute:**
+  1. Navigate to the CLI prompt.
+  2. Issue the command to update the OpenAI key with the valid key.
+- **Expected Output:**  
+  - Message: "API key updated successfully."  
+  - Current key used by the CLI matches the newly provided key.  
+  - No retry logic is triggered post successful update.
+- **Edge Case:**  
+  N/A (straightforward success case).
+
+---
+
+#### **Scenario 2: Invalid API Key Update Attempt**
+- **Input:**  
+  - Use an invalid OpenAI API key (e.g., `sk-INVALIDTOKEN12345`).
+- **Steps to Execute:**
+  1. Navigate to the CLI prompt.
+  2. Issue the command to update the OpenAI key using an invalid key.
+- **Expected Output:**  
+  - Error message: "Invalid API key. Please try again with a valid key."
+  - CLI prohibits operations dependent on OpenAI functionality until a valid key is set.  
+  - No updates made to the stored OpenAI token in the system.
+
+---
+
+#### **Scenario 3: Existing Key Validation After Update**
+- **Input:**  
+  - Existing stored key in the system: `sk-OLDTOKEN12345`.  
+  - Provide a valid new key: `sk-NEWTOKEN12345`.
+- **Steps to Execute:**
+  1. Check the current OpenAI key being used.
+  2. Update the OpenAI key to the new key.
+  3. Validate that subsequent OpenAI-related operations use the updated key.
+- **Expected Output:**  
+  - No stale key (old token) is used during retries or operations.
+  - Logs show explicit use of `sk-NEWTOKEN12345`.
+
+---
+
+#### **Scenario 4: Handling Undefined or Stale Tokens**
+- **Input:**  
+  - Provide an undefined or empty token (NULL or `""`).
+- **Steps to Execute:**
+  1. Try to update the OpenAI token using an empty or undefined value.
+- **Expected Output:**  
+  - Error message: "API key cannot be empty."  
+  - CLI prevents system operations dependent on OpenAI functionality.
+
+---
+
+#### **Scenario 5: Token Validation Failure on Retry**
+- **Input:**  
+  - Enter a key that causes a validation failure during retry logic (e.g., `sk-FAIL1212`).
+- **Steps to Execute:**
+  1. Manually simulate/trigger a retry logic scenario after token update.
+- **Expected Output:**  
+  - System checks for the correct token explicitly passed during the retry.  
+  - Validation failure results in an appropriate error.
+
+---
+
+#### **Scenario 6: Error Message Localization Support (Where Applicable)**
+- **Input/Configuration:**
+  - CLI language settings: French.
+  - Use an invalid OpenAI API key.
+- **Expected Output:**  
+  - Error message is displayed in the selected language: "Clé API invalide. Veuillez réessayer avec une clé valide."  
+  - Similar behavior for other supported languages (perform tests for all configured locales).
+
+---
+
+#### **Scenario 7: Conflicting Tokens Across Multiple Threads**
+- **Input:**  
+  - Thread 1: Using stored valid token `sk-ABC12345678`.  
+  - Thread 2: Updates the token to a new valid key `sk-XYZ98765432`.
+- **Steps to Execute:**  
+  - Verify token behavior during concurrent thread access to OpenAI functionality.
+- **Expected Output:**  
+  - Proper isolation of the global variable, ensuring that Thread 2's update reflects globally without impacting Thread 1 (if it is meant to be isolated).
+
+---
+
+#### **Scenario 8: Non-Affected API Keys Validation**
+- **Input:**  
+  - Use valid API keys for unrelated services like GitHub (e.g., `ghp-GITHUBKEY12345`).  
+- **Steps to Execute:**  
+  1. Use the Update API command with the GitHub key.
+  2. Observe behavior.
+- **Expected Output:**  
+  - No interruptions or errors during GitHub key updates.  
+  - Issue isolated to OpenAI API logic.
+
+---
+
+### **Non-Functional Test Cases**
+#### **Scenario 1: Performance During High Frequency Key Updates**
+- **Input:**  
+  - Automate multiple valid and invalid key updates in rapid succession (> 100 transactions/minute).  
+- **Expected Output:**  
+  - CLI remains responsive with no crashes, slowdowns, or memory leaks.
+
+---
+
+#### **Scenario 2: Resilience Against Invalid Inputs**
+- **Input:**  
+  - Use random invalid tokens: `"stringonly"`, numbers: `123456`, or special characters: `!@#$%^&*()`.
+- **Expected Output:**  
+  - No system crashes; only expected error messages are shown.  
+  - Validation consistently fails for malformed keys.
+
+---
+
+#### **Scenario 3: Scalability with Large Tokens**
+- **Input:**  
+  - Simulate token size limits using a 5MB API key string.  
+- **Expected Output:**  
+  - The system should have a maximum character limit for tokens (e.g., 500 characters).  
+  - Error shown: "Token length exceeds allowed limit."
+
+---
+
+#### **Scenario 4: CLI Usability in Low-Bandwidth Environments**  
+- **Input:**  
+  - System under low latency conditions (< 512 Kbps).  
+  - Perform token update operation.  
+- **Expected Output:**  
+  - CLI does not hang; appropriate progress or error messages are returned efficiently.
+
+---
+
+#### **Scenario 5: Security Validation for Masking Tokens in Logs**
+- **Input:**  
+  - System logs during failed attempts for valid or invalid tokens.  
+- **Expected Output:**  
+  - Tokens should always be masked (`sk-*****`) in system logs and error traces.  
+  - No token leakage observed in debugging or standard output.
+
+---
+
+#### **Scenario 6: Power Interruption During Token Update**
+- **Input:**  
+  - Simulate system shutdown or CLI power interruption during token update.
+- **Steps to Execute:**  
+  1. Begin token update.
+  2. Simulate abrupt termination.
+- **Expected Output:**  
+  - Token storage rollback to the previous valid token, ensuring system consistency.
+
+---
+
+This list ensures full coverage for both functional and non-functional aspects of the issue described in the ticket attached.
