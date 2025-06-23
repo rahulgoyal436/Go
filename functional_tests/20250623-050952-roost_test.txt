@@ -1,0 +1,75 @@
+### Test Scenarios for [ZBIO-6545] Add claude-3-7-sonnet Anthropic Model in Google Vertex AI
+
+#### **Functional Test Cases**
+
+- **Test Case:** Verify successful integration of the Claude-3-7-Sonnet model into Google Vertex AI.
+  - **Input:** Attempt to add the Claude-3-7-Sonnet model to Vertex AI.
+  - **Expected Output:** Model is successfully integrated and appears in the available models list.
+  - **Edge Case:** Handle model name discrepancies (e.g., typos or capitalization errors during integration).
+
+- **Test Case:** Validate model invocation via Vertex AI after integration.
+  - **Input:** Submit a sample input text to the Claude-3-7-Sonnet model via Vertex AI APIs.
+  - **Expected Output:** Model returns correct AI-generated responses without errors.
+
+- **Test Case:** Ensure that the Claude-3-7-Sonnet model supports all input formats required by Vertex AI.
+  - **Input:** Provide various formats such as plain text, JSON, and XML.
+  - **Expected Output:** Model processes all formats correctly and returns appropriate outputs.
+  - **Edge Case:** Test input of very large JSON data or malformed text and verify the error handling.
+
+- **Test Case:** Validate access permissions.
+  - **Input:** Attempt to use the Claude-3-7-Sonnet model with restricted or unauthorized access.
+  - **Expected Output:** Access is denied with a clear error message.
+
+- **Test Case:** Verify compatibility with different environments (sandbox, dev, production).
+  - **Input:** Deploy the model across all environments and use its functionality.
+  - **Expected Output:** Model works seamlessly in each environment.
+
+- **Test Case:** Confirm integration logs are generated.
+  - **Input:** Integrate Claude-3-7-Sonnet model into Google Vertex AI.
+  - **Expected Output:** Logs contain detailed integration success/failure entries.
+  - **Edge Case:** Verify logs when integration fails due to an API timeout or system maintenance.
+
+- **Test Case:** Ensure scalability during high load.
+  - **Input:** Simulate multiple concurrent API requests to the Claude-3-7-Sonnet model.
+  - **Expected Output:** Model responds appropriately and maintains performance metrics within defined limits.
+
+---
+
+#### **Non-Functional Test Cases**
+
+- **Test Case:** Performance testing of response time.
+  - **Input:** Submit an input request to the Claude-3-7-Sonnet model.
+  - **Expected Output:** Model returns output within acceptable response time limits (<300ms).
+  - **Edge Case:** Test under slow network conditions and check if response time degrades gracefully.
+
+- **Test Case:** Load testing to ensure server stability.
+  - **Input:** Send thousands of requests concurrently.
+  - **Expected Output:** The system maintains integrity and no crashes occur.
+
+- **Test Case:** Usability testing for model selection in Google Vertex AI.
+  - **Input:** Navigate the interface to select Claude-3-7-Sonnet model.
+  - **Expected Output:** UI makes the model easy to locate and select with appropriate naming conventions.
+
+- **Test Case:** Verify compatibility of Claude-3-7-Sonnet model with Google Vertex AI SDKs.
+  - **Input:** Use SDKs in Python, Node.js, and Java to call GPT resources.
+  - **Expected Output:** SDK integration works without errors for the corresponding outputs.
+
+- **Test Case:** Security testing for data flow.
+  - **Input:** Send sensitive and encrypted requests to the Claude-3-7-Sonnet model.
+  - **Expected Output:** Data security is maintained, and model access is restricted to authorized users.
+
+- **Test Case:** Verify logging and monitoring quality.
+  - **Input:** Execute various operations on Claude-3-7-Sonnet through Vertex AI.
+  - **Expected Output:** Monitoring tools capture all operations with detailed logs and metrics.
+
+- **Test Case:** Availability testing under system maintenance.
+  - **Input:** Attempt to use the model during scheduled maintenance periods.
+  - **Expected Output:** Model access is unavailable but with a clear maintenance error message.
+
+- **Test Case:** Compliance testing for Claude-3-7-Sonnet with Google Vertex AI policies.
+  - **Input:** Compare model usage guidelines with Google AI's compliance rules.
+  - **Expected Output:** Model complies entirely with the rules.
+
+--- 
+
+These scenarios adhere to the specific language style required and ensure a comprehensive approach for both functionality and reliability of integrating Claude-3-7-Sonnet into Google Vertex AI.
