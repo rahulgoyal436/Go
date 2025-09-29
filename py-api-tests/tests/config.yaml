@@ -1,0 +1,5 @@
+api:
+  host: "https://google.com/sample/v1/api"
+  api_key: "sample-api-key"
+  timeout: 10
+  retries: 3
