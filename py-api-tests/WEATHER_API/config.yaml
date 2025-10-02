@@ -1,0 +1,13 @@
+weather_api:
+  host: "https://api.weatherapi.com/v1"
+  api_key: "<API_KEY>"
+  timeout: <TIMEOUT>
+  retries: <RETRIES>        # optional
+  verify_ssl: <VERIFY_SSL>  # optional
+
+nobel_prize_api:
+  host: "http://api.nobelprize.org/2.1"
+  api_key: "<API_KEY>"
+  timeout: <TIMEOUT>
+  retries: <RETRIES>        # optional
+  verify_ssl: <VERIFY_SSL>  # optional
