@@ -1,0 +1,2 @@
+api:
+  host: "https://circleci.com/api/v2"
