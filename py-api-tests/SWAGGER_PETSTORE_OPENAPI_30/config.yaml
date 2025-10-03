@@ -1,0 +1,6 @@
+api:
+  host: https://petstore3.swagger.io/api/v3/
+
+authentication:
+  petstore_auth: auth_token
+  api_key: apikey
