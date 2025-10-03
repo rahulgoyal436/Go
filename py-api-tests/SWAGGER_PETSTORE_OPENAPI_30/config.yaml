@@ -1,0 +1,8 @@
+file: "/Users/rahulgoyal/Downloads/petstore.json"
+host:
+  SWAGGER_PETSTORE_OPENAPI_30_API_HOST: "https://petstore3.swagger.io/api/v3/"
+  SWAGGER_PETSTORE_OPENAPI_30_BASE_URL: "https://petstore3.swagger.io/api/v3/"
+auth:
+  petstore_auth: "${PETSTORE_AUTH_OAUTH2_TOKEN}"
+  api_key: "${api_key}"
+userHostKey: "SWAGGER_PETSTORE_OPENAPI_30_API_HOST"
