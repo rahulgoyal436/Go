@@ -1,0 +1,6 @@
+host: "${SWAGGER_PETSTORE_OPENAPI_30_API_HOST} || ${SWAGGER_PETSTORE_OPENAPI_30_BASE_URL}"
+auth:
+  petstore_auth:
+    PETSTORE_AUTH_OAUTH2_TOKEN: "dummytoken"
+  api_key:
+    api_key: "dummykey"
