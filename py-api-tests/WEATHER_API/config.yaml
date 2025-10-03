@@ -1,0 +1,6 @@
+api:
+  host: "https://api.weatherapi.com/v1"
+  api_key: ""
+  timeout: 
+  retries:
+  verify_ssl:
