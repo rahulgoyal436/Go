@@ -1,0 +1,6 @@
+api:
+  host: https://petstore.swagger.io/v2
+
+authentication:
+  api_key: special-key
+  petstore_auth: special-key
