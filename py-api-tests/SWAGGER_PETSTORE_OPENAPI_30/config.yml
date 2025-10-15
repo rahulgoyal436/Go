@@ -1,0 +1,6 @@
+api:
+  host: ${API_HOST}
+
+authentication:
+  petstore_auth: <AUTH_TOKEN>
+  api_key: <API_KEY>
