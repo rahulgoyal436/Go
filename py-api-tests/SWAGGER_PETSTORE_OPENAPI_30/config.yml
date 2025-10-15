@@ -1,0 +1,7 @@
+api:
+  host: ${API_HOST}
+
+authentication:
+  token: <TOKEN>
+  api_key: <API_KEY>
+  password: <PASSWORD>
