@@ -1,0 +1,27 @@
+[
+  {
+    "status": "active",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "status": "completed",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "status": "invalid-status",
+    "statusCode": 400,
+    "scenario": "Invalid status value"
+  },
+  {
+    "status": "unexpected!value",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "status": "",
+    "statusCode": 400,
+    "scenario": "Invalid status value"
+  }
+]

@@ -1,0 +1,2 @@
+"method","paramName","location","type","required","responseCodes"
+"GET","status","query","string",false,"200, 400, default"
