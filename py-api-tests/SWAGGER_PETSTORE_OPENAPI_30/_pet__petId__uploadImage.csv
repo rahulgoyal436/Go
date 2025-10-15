@@ -1,0 +1,3 @@
+"method","paramName","location","type","required","responseCodes"
+"POST","petId","path","integer",true,"200, 400, 404, default"
+"POST","additionalMetadata","query","string",false,"200, 400, 404, default"
