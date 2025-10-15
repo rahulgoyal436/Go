@@ -1,0 +1,66 @@
+{
+  "api": "/pet/{petId}/uploadImage",
+  "info": {
+    "title": "Swagger Petstore - OpenAPI 3.0",
+    "description": "This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about\nSwagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!\nYou can now help us improve the API whether it's by making changes to the definition itself or to the code.\nThat way, with time, we can improve the API in general, and expose some of the new features in OAS3.\n\nSome useful links:\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\n- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)",
+    "termsOfService": "https://swagger.io/terms/",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.26"
+  },
+  "methods": [
+    {
+      "method": "POST",
+      "summary": "Uploads an image.",
+      "description": "Upload image of the pet.",
+      "parameters": [
+        {
+          "name": "petId",
+          "in": "path",
+          "required": true,
+          "type": "integer",
+          "description": "ID of pet to update"
+        },
+        {
+          "name": "additionalMetadata",
+          "in": "query",
+          "required": false,
+          "type": "string",
+          "description": "Additional Metadata"
+        }
+      ],
+      "responses": [
+        {
+          "code": "200",
+          "description": "successful operation",
+          "contentType": "application/json",
+          "example": null
+        },
+        {
+          "code": "400",
+          "description": "No file uploaded",
+          "contentType": "",
+          "example": null
+        },
+        {
+          "code": "404",
+          "description": "Pet not found",
+          "contentType": "",
+          "example": null
+        },
+        {
+          "code": "default",
+          "description": "Unexpected error",
+          "contentType": "",
+          "example": null
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2025-10-15T16:06:59.541Z"
+}
