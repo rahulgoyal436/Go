@@ -1,0 +1,26 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy adult dog",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Test metadata with file",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Missing registration info",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Invalid metadata example",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  }
+]
