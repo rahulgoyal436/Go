@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 101,
+    "additionalMetadata": "Healthy and vaccinated",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "No such pet in the database",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Invalid pet information",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 12345,
+    "additionalMetadata": "Unexpected error encountered",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]
