@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 101,
+    "additionalMetadata": "Valid pet metadata",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 999999,
+    "additionalMetadata": "Non-existent pet",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Invalid data",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 102,
+    "additionalMetadata": "Another valid pet metadata",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
