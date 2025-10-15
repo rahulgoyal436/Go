@@ -1,0 +1,26 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy and vaccinated",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Missing photo records",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "??Invalid_Metadata??",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  }
+]
