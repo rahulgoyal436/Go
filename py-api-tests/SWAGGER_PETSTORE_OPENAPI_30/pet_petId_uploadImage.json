@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 123,
+    "additionalMetadata": "This is a golden retriever",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 9999,
+    "additionalMetadata": "Invalid metadata test",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "This is invalid data",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 456,
+    "additionalMetadata": "Labrador, 5 years old",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
