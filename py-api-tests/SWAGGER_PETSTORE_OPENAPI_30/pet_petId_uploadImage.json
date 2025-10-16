@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Test metadata for pet upload operation",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Pet not found in the database",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "Invalid pet ID",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Another successful upload for testing",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
