@@ -1,0 +1,5 @@
+api:
+  host: ${SWAGGER_PETSTORE_OPENAPI_30_API_HOST}
+authentication:
+  petstore_auth: <OAUTH2_TOKEN>
+  api_key: <API_KEY>
