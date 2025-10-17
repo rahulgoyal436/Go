@@ -1,0 +1,26 @@
+[
+  {
+    "petId": 101,
+    "additionalMetadata": "Healthy dog",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "invalid_pet_id_test",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 9999,
+    "additionalMetadata": "Nonexistent pet metadata",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": "invalid_string_value",
+    "additionalMetadata": "",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]
