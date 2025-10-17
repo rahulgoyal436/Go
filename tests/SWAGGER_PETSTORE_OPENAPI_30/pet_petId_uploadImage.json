@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 123,
+    "additionalMetadata": "Healthy Labrador, Vaccinated",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 9999,
+    "additionalMetadata": "Golden Retriever, Missing",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 12345,
+    "additionalMetadata": "Special case metadata",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 456,
+    "additionalMetadata": "German Shepherd, Adult Dog",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
