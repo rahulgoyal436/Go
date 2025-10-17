@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 101,
+    "additionalMetadata": "Healthy adult Labrador",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "Testing invalid metadata!@#",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 9999,
+    "additionalMetadata": "Unknown pet type provided",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 202,
+    "additionalMetadata": "Vaccinated Persian cat",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
