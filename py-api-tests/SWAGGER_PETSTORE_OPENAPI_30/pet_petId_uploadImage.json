@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy dog",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 98765,
+    "additionalMetadata": "Searching for a missing pet",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": "NaN",
+    "additionalMetadata": null,
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Golden Retriever",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
