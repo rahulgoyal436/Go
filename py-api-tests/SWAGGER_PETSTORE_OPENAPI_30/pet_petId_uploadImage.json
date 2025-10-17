@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy pet checkup",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Does not exist in records",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": "invalid_id",
+    "additionalMetadata": "Random invalid metadata",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 98765,
+    "additionalMetadata": "Vaccination records",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
