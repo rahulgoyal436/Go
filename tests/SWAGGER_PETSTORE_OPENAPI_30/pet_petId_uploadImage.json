@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy pet requiring routine checkup",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -9999,
+    "additionalMetadata": "Invalid pet metadata input",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 54321,
+    "additionalMetadata": "Seeking urgent care for illness",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "Unexpected characters@@@",
+    "statusCode": 503,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 89101,
+    "additionalMetadata": "Routine vaccination schedule",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
