@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy cat vaccination records",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 987654,
+    "additionalMetadata": "Lost pet location details",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": "abc123",
+    "additionalMetadata": "This is invalid metadata",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 56789,
+    "additionalMetadata": "Medical history of injured stray dog",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
