@@ -1,0 +1,2 @@
+api:
+  host: ${SWAGGER_PETSTORE_OPENAPI_30_API_HOST}
