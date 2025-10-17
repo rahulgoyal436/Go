@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 123,
+    "additionalMetadata": "Healthy pet added",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 9999999,
+    "additionalMetadata": "Invalid pet file metadata",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "error_unknown_metadata",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 234,
+    "additionalMetadata": "New pet added successfully",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
