@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy adult pet",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Vaccinated and neutered",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": null,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 999999,
+    "additionalMetadata": "Non-existent pet",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Invalid metadata input value!",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  }
+]
