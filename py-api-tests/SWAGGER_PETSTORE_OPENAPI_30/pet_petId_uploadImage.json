@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy Labrador",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Golden Retriever with vaccination record",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "Invalid pet details",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Unexpected input",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]
