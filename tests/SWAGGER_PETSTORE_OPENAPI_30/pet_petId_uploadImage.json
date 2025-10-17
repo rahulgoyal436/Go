@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 101,
+    "additionalMetadata": "Healthy Labrador",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "Unknown",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Unregistered Pet",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Invalid Metadata",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 202,
+    "additionalMetadata": "Vaccinated Puppy",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
