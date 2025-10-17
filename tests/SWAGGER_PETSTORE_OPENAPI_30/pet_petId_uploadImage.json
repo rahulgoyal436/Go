@@ -1,0 +1,32 @@
+[
+  {
+    "petId": 101,
+    "additionalMetadata": "Healthy adult German Shepherd",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Invalid pet identifier",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Invalid test metadata",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 340,
+    "additionalMetadata": "Vaccinated and healthy cat",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
