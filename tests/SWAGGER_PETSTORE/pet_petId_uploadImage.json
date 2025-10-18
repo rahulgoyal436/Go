@@ -1,0 +1,37 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Photo of a golden retriever",
+    "file": "dog_photo.jpg",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Medical report of parrot",
+    "file": "parrot_report.pdf",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": null,
+    "file": "",
+    "statusCode": 400,
+    "scenario": "Invalid pet ID"
+  },
+  {
+    "petId": 12345,
+    "additionalMetadata": "Extra characters @#$",
+    "file": "not_a_file",
+    "statusCode": 415,
+    "scenario": "Invalid file format"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "file": null,
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  }
+]
