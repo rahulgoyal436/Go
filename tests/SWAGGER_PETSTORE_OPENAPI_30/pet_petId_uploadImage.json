@@ -1,0 +1,20 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy pet with vaccination records",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": "invalid_id",
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Lost pet, microchipped",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
