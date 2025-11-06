@@ -1,0 +1,92 @@
+[
+  {
+    "responseBody": "{\"message\":\"This is a public, enabled, non-dismissible banner, set using the API\",\"isDismissible\":false,\"isEnabled\":true,\"hashId\":\"9HN2FJK9DM8BHRWERVW3RRTGDJ4G4D5C\",\"visibility\":\"public\"}",
+    "swaggerDataInfo": {
+      "title": "The Jira Cloud platform REST API",
+      "description": "Jira Cloud platform REST API documentation",
+      "termsOfService": "http://atlassian.com/terms/",
+      "contact": {
+        "email": "ecosystem@atlassian.com"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      },
+      "version": "1001.0.0-SNAPSHOT-3b807b6e38939e1176a0f171c77def61ed19f95e"
+    },
+    "statusCode": 200,
+    "scenario": "Returned if the request is successful."
+  },
+  {
+    "responseBody": null,
+    "swaggerDataInfo": {
+      "title": "Invalid API",
+      "description": "",
+      "termsOfService": "https://invalid-terms-url.com",
+      "contact": {
+        "email": "invalid@atlassian.com"
+      },
+      "license": {
+        "name": "Invalid License",
+        "url": "https://invalid-license-url.com"
+      },
+      "version": "0.0.0-invalid"
+    },
+    "statusCode": 401,
+    "scenario": "Returned if the authentication credentials are incorrect or missing."
+  },
+  {
+    "responseBody": "\"Only admins can read banner configuration.\"",
+    "swaggerDataInfo": {
+      "title": "The Jira Cloud platform REST API",
+      "description": "Jira Cloud platform REST API documentation",
+      "termsOfService": "http://atlassian.com/terms/",
+      "contact": {
+        "email": "ecosystem@atlassian.com"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      },
+      "version": "1001.0.0-SNAPSHOT-3b807b6e38939e1176a0f171c77def61ed19f95e"
+    },
+    "statusCode": 403,
+    "scenario": "Returned if the user does not have the necessary permission."
+  },
+  {
+    "responseBody": "{\"message\":\"Invalid payload received\",\"isDismissible\":\"invalidType\",\"isEnabled\":\"invalidType\",\"hashId\":\"INVALID_HASH\",\"visibility\":123}",
+    "swaggerDataInfo": {
+      "title": "Unauthorized Access Test",
+      "description": "Fake API description",
+      "termsOfService": "https://bogus-terms-url.com",
+      "contact": {
+        "email": "invalid-email.com"
+      },
+      "license": {
+        "name": "Prohibited License",
+        "url": "https://bogus-license-url.com"
+      },
+      "version": "999.999-invalid-version"
+    },
+    "statusCode": 401,
+    "scenario": "Returned if the authentication credentials are incorrect or missing."
+  },
+  {
+    "responseBody": "{\"message\":\"Partial Access Allowed\",\"isDismissible\":true,\"isEnabled\":false,\"hashId\":\"PARTIAL_HASH\",\"visibility\":\"limited\"}",
+    "swaggerDataInfo": {
+      "title": "Limited Access API",
+      "description": "Partial API documentation for limited users.",
+      "termsOfService": "http://partial-terms-url.com",
+      "contact": {
+        "email": "partial@atlassian.com"
+      },
+      "license": {
+        "name": "Partial License",
+        "url": "http://partial-license-url.com"
+      },
+      "version": "2023.0.0-PARTIAL-VERSION"
+    },
+    "statusCode": 403,
+    "scenario": "Returned if the user does not have the necessary permission."
+  }
+]
