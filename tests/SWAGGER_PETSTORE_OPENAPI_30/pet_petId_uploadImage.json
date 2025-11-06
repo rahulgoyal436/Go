@@ -1,0 +1,62 @@
+[
+  {
+    "petId": 101,
+    "additionalMetadata": "Photo of pet during adoption",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Invalid pet details",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": "unknown",
+    "additionalMetadata": "@metadata$##",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 202,
+    "additionalMetadata": "Veterinary check photo",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": null,
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 12345,
+    "additionalMetadata": "Pet adoption documents",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": "error-203",
+    "additionalMetadata": "!invalidmetadata!",
+    "statusCode": 503,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 303,
+    "additionalMetadata": "Photo during training",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -999,
+    "additionalMetadata": "Invalid data provided",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  }
+]
