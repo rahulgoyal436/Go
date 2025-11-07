@@ -1,0 +1,50 @@
+[
+  {
+    "petId": 123,
+    "additionalMetadata": "Healthy dog vaccination record",
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 999999,
+    "additionalMetadata": "Some invalid metadata types",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Unexpected input error",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 456,
+    "additionalMetadata": "Updating pet sale record",
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "petId": "abc",
+    "additionalMetadata": "Invalid metadata test",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 987654321,
+    "additionalMetadata": "Nonexistent record query",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": null,
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]
