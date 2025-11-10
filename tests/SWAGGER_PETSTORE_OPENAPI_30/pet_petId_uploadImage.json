@@ -1,0 +1,62 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy pet with vaccination records",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "invalid_metadata_test",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Non-existent pet",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Unexpected input",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 54321,
+    "additionalMetadata": "Pet has allergy documentation",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 1,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 88888,
+    "additionalMetadata": "Lost pet information",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": "invalid123",
+    "additionalMetadata": "data_error_sample",
+    "statusCode": 422,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Pet with a microchip",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": null,
+    "additionalMetadata": null,
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  }
+]
