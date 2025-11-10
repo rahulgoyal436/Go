@@ -1,0 +1,50 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy adult dog",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 12345,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "Unknown pet",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "Invalid pet ID",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Recently adopted kitten",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": null,
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Does not exist in database",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 10001,
+    "additionalMetadata": "Invalid characters!",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  }
+]
