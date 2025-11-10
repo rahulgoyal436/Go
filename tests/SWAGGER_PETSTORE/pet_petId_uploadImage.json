@@ -1,0 +1,37 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Sample pet metadata",
+    "file": "sample_pet_image.jpg",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "file": "invalid_image.txt",
+    "statusCode": 400,
+    "scenario": "Bad Request"
+  },
+  {
+    "petId": 98765,
+    "additionalMetadata": "Detailed pet information",
+    "file": "valid_pet_photo.png",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "contain_invalid_chars!@#",
+    "file": "some_unknown_file.csv",
+    "statusCode": 422,
+    "scenario": "Unprocessable Entity"
+  },
+  {
+    "petId": 54321,
+    "additionalMetadata": "Additional comments about pet",
+    "file": "pet_display_image.jpeg",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  }
+]
