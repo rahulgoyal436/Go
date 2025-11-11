@@ -1,0 +1,50 @@
+[
+  {
+    "petId": 101,
+    "additionalMetadata": "Healthy pet",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 999999,
+    "additionalMetadata": "Nonexistent pet",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "Invalid metadata entry",
+    "statusCode": "default",
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": 202,
+    "additionalMetadata": "Rescue pet available",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": null,
+    "additionalMetadata": "No metadata passed",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 765,
+    "additionalMetadata": "Active adoption pet",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -999,
+    "additionalMetadata": "Invalid metadata",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  }
+]
