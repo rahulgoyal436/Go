@@ -1,0 +1,50 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy pet check-up",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Annual vaccination",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": "invalid_id",
+    "additionalMetadata": 123,
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": null,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 99999,
+    "additionalMetadata": "Pet not found in database",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 88888,
+    "additionalMetadata": "Non-existent pet",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": "random_string",
+    "additionalMetadata": null,
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": "undefined",
+    "additionalMetadata": "undefined",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]
