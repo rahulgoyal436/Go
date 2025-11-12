@@ -1,0 +1,50 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy pet data",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Pet has vaccination details",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "petId": -999,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": "invalid_pet_id",
+    "additionalMetadata": "Invalid entry",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 98765,
+    "additionalMetadata": "Pet ID not found in database",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 43210,
+    "additionalMetadata": "",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": null,
+    "additionalMetadata": null,
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": "",
+    "additionalMetadata": 12345,
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  }
+]
