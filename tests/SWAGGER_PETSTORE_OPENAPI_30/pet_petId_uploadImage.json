@@ -1,0 +1,50 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "Healthy pet available",
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Vaccinated and ready",
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 0,
+    "additionalMetadata": "Invalid data",
+    "statusCode": 400,
+    "scenario": "No file uploaded"
+  },
+  {
+    "petId": 999999,
+    "additionalMetadata": "Not found",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 54321,
+    "additionalMetadata": "No match found in inventory",
+    "statusCode": 404,
+    "scenario": "Pet not found"
+  },
+  {
+    "petId": 98765,
+    "additionalMetadata": "Unexpected input detected",
+    "statusCode": 500,
+    "scenario": "Unexpected error"
+  },
+  {
+    "petId": null,
+    "additionalMetadata": "Error in system configuration",
+    "statusCode": 503,
+    "scenario": "Unexpected error"
+  }
+]
