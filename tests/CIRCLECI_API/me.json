@@ -1,0 +1,60 @@
+[
+  {
+    "responseBody": null,
+    "swaggerDataInfo": {
+      "version": "v2",
+      "title": "CircleCI API",
+      "description": "This describes the resources that make up the CircleCI API v2.",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/license/MIT"
+      }
+    },
+    "statusCode": 200,
+    "scenario": "User login information."
+  },
+  {
+    "responseBody": null,
+    "swaggerDataInfo": {
+      "version": "",
+      "title": "C",
+      "description": "Invalid API description.",
+      "license": {
+        "name": "",
+        "url": "invalid_url"
+      }
+    },
+    "statusCode": 400,
+    "scenario": "Error response."
+  },
+  {
+    "responseBody": null,
+    "swaggerDataInfo": {
+      "version": "v2",
+      "title": "CircleCI API",
+      "description": "This describes the resources that make up the CircleCI API v2.",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/license/MIT"
+      }
+    },
+    "statusCode": 201,
+    "scenario": "User login information."
+  },
+  {
+    "responseBody": [
+      "invalid"
+    ],
+    "swaggerDataInfo": {
+      "version": "wrong_version",
+      "title": "Circle",
+      "description": "",
+      "license": {
+        "name": null,
+        "url": "http://invalid_license.com"
+      }
+    },
+    "statusCode": 500,
+    "scenario": "Error response."
+  }
+]

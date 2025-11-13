@@ -1,0 +1,6 @@
+api:
+  host: ${CIRCLECI_API_API_HOST}
+authentication:
+  api_key_header: ${Circle-Token}
+  basic_auth: ${CIRCLECI_API_AUTH_USERNAME}
+  api_key_query: ${circle-token}
