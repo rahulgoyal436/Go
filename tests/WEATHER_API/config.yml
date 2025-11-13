@@ -1,0 +1,4 @@
+api:
+  host: ${WEATHER_API_API_HOST}
+authentication:
+  ApiKeyAuth: ${key}
