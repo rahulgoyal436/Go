@@ -1,0 +1,37 @@
+[
+  {
+    "petId": 12345,
+    "additionalMetadata": "This is a valid additional metadata input for testing purposes.",
+    "file": "pet_image_1.jpg",
+    "statusCode": 200,
+    "scenario": "Success"
+  },
+  {
+    "petId": 67890,
+    "additionalMetadata": "Testing additional metadata with a successful response.",
+    "file": "pet_image_2.png",
+    "statusCode": 201,
+    "scenario": "Success - Resource Created"
+  },
+  {
+    "petId": -1,
+    "additionalMetadata": "",
+    "file": "invalid_file",
+    "statusCode": 400,
+    "scenario": "Bad Request - Invalid File"
+  },
+  {
+    "petId": "NotANumber",
+    "additionalMetadata": 12345,
+    "file": "",
+    "statusCode": 422,
+    "scenario": "Validation Error - Invalid Data"
+  },
+  {
+    "petId": null,
+    "additionalMetadata": "Valid metadata but missing required petId.",
+    "file": null,
+    "statusCode": 404,
+    "scenario": "Not Found"
+  }
+]
